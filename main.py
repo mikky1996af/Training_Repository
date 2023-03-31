@@ -6,10 +6,17 @@ pygame.display.set_caption("Моя первая игра")
 icon = pygame.image.load("image/1337497_game_go_play_pikachu_pokemon_icon.png")
 pygame.display.set_icon(icon)
 
+square = pygame.Surface((10, 10))
+square.fill('Yellow')
+
+#myfont = pygame.font.Font('')
+
 running = True
 while running:
 
-   # screen.fill((255, 215, 0))
+    pygame.draw.circle(square, 'Red', (10, 10), 10)
+
+    screen.blit(square, (10, 0))
 
     pygame.display.update()
 
@@ -18,9 +25,6 @@ while running:
             running = False
             pygame.quit()
 
-        elif even.type == pygame.KEYDOWN:
-            if even.key == pygame.K_a:
-                screen.fill((0, 191, 255))
 
 
 
